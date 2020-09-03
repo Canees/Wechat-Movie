@@ -1,0 +1,94 @@
+/**index.wxss**/
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.topbackground {
+  width: 100%;
+  height: 650rpx;
+  background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
+  position: relative;
+  overflow: hidden;
+}
+
+.topbackground view {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* 中间 */
+.centerbox {
+  width: 90%;
+  height: 650rpx;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8rpx;
+  box-shadow: 0 0 50rpx rgba(0, 0, 0, 0.2);
+}
+
+/* input */
+.userlooking,
+.userinput {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 200rpx;
+  transform: translate(-50%, 0);
+}
+
+.userlooking {
+  top: 400rpx;
+}
+
+.userinput input {
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 20rpx;
+  border: 1px solid #cad1d7;
+  border-radius: .25rem;
+  background: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.userlooking button[type='primary'] {
+  width: 200rpx;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 10rpx;
+}
+
+.videolist {
+  width: 79.45%;
+  position: absolute;
+  left: 50%;
+  top: 285rpx;
+  height: 350rpx;
+  transform: translate(-50%, 0);  
+  border-bottom-left-radius: 5rpx;
+  border-bottom-right-radius: 5rpx;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  overflow-y: auto;
+  overflow-x: hidden;  
+  background: white;
+}
+.listitem{
+  padding: 20rpx 10rpx;
+  display: flex;
+  align-items: center;
+}
+.listitem image{
+  width: 130rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.listitem text{
+  font-size: 26rpx;
+}

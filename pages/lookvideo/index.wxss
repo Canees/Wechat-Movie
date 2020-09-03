@@ -1,0 +1,34 @@
+.content{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background: white;
+}
+.videobox video{
+  width: 100vw;
+  height: 30vh;
+}
+.videolist{
+  padding: 20rpx 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: wrap;
+}
+.videolist view{
+  width: 110rpx;
+  border: solid 1px #ccc;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 2;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+}
+.videolist .active{
+  color: #FFFFFF;
+  background-color: #1AAD19;
+  border: solid 1px #1AAD19;
+}

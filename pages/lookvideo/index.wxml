@@ -1,0 +1,13 @@
+<view class="content">
+	<view class="videobox">
+		<block>
+			<video autoplay src="{{videodata}}" vslide-gesture-in-fullscreen enable-auto-rotation show-screen-lock-button></video>
+		</block>
+	</view>
+	<view class="videolist">
+		<block wx:for="{{videolist}}" wx:key="item" wx:index="index">
+			<view class="{{item.check ? 'active':''}}" bindtap="clickItem" data-item="{{item}}" data-index="{{index}}">
+				{{item.name}}</view>
+		</block>
+	</view>
+</view>

@@ -19,6 +19,10 @@ Page({
         videolist: data
       })
       // 需要默认一组
+      wx.showLoading({
+        title: '加载中...',
+        icon:'none'
+      })
       this.parsePlayurl(data[0])
     } else {
       wx.showToast({
@@ -53,6 +57,7 @@ Page({
   // 解析视频m3u8地址
   parsePlayurl(item) {
     // 解析单个视频m3u8地址
+    // parseMovieitem2Url
     wx.cloud.callFunction({
       name: 'parseMovieitem2Url',
       data: item,
@@ -68,7 +73,7 @@ Page({
           })
         }
       },
-      fail: () => {
+      fail: (e) => {
         wx.showToast({
           title: '网络错误',
           icon: 'none'

@@ -1,9 +1,6 @@
 <!--index.wxml-->
 <view class="container" bindtap="closemodel">
 	<view class="topbackground">
-		<block wx:for="{{poplist}}" wx:key="item" wx:index="index">
-			<view style="width:{{item.width}}rpx;height:{{item.height}}rpx;top:{{item.top}}%;left:{{item.left}}%;background: rgba(255,255,255,{{item.opcaticy}});"></view>
-		</block>
 	</view>
 	<view class="centerbox">
 		<view class="userinput">

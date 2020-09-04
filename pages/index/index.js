@@ -4,27 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    poplist: [],// 泡泡
     usertext: '',//字段
     videolist: [],//查找到的视频
-  },
-  // 随机设置泡泡样式
-  randomStyle() {
-    // 个数随机、10之间
-    const num = (Math.random() * 10) + 3 //随机1-10个泡泡
-    let poplist = []
-    for (let i = 0; i < num; i++) {
-      poplist.push({
-        width: Math.floor((Math.random() * 150) + 50),
-        height: Math.floor((Math.random() * 150) + 50),
-        top: Math.floor((Math.random() * 80)),
-        left: Math.floor((Math.random() * 80)),
-        opcaticy: Math.random() - 0.4
-      })
-    }
-    this.setData({
-      poplist: poplist
-    })
   },
   // 搜索视频list
   searchVideoList() {
@@ -63,12 +44,12 @@ Page({
           wx.hideLoading()
         }
       })
-    } else[
+    } else{
       wx.showToast({
         title: '乱点个啥?',
         icon: 'none'
       })
-    ]
+    }
   },
   // 用户输入
   userinput(e) {
@@ -112,11 +93,5 @@ Page({
         wx.hideLoading()
       }
     })
-  },
-  onLoad: function () {
-    // 生成气泡
-    // setInterval(()=>{
-    //   this.randomStyle()
-    // },600)
   }
 })
